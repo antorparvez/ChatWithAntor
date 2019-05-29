@@ -108,7 +108,9 @@ public class ChatFragment extends Fragment {
 
                     for (String id : userList){
                         if (user.getId().equals(id)){
-                            if (!mUsers.equals(null)){
+                            if (mUsers.size()!=0){
+                          //  if (!mUsers.equals(null)){
+
                                 for (User user1 : mUsers){
                                     if (!user.getId().equals(user1.getId())){
                                         mUsers.add(user);

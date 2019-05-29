@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.bumptech.glide.Glide;
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new ChatFragment(),"Chats");
-        viewPagerAdapter.addFragment(new UserFragment(),"Users");
+        viewPagerAdapter.addFragment(new UserFragment(),"Friends");
         viewPagerAdapter.addFragment(new ProfileFragment(),"Profile");
 
         viewPager.setAdapter(viewPagerAdapter);
@@ -109,8 +110,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
+
         switch (item.getItemId()){
-            case R.id.bar_layout:
+
+            case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent( MainActivity.this,StartActivity.class));
                 finish();

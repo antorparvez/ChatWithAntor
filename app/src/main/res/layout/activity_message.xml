@@ -15,7 +15,7 @@
         <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark"
+            android:background="#1E88E5"
 
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
 
@@ -53,6 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/view_msg"
+        android:background="@drawable/chat_background"
         android:layout_below="@id/app_bar_layout"
         android:layout_above="@id/write_msg_box">
 
@@ -84,7 +85,7 @@
             android:layout_height="40dp"
             android:id="@+id/btn_send"
             android:layout_alignParentEnd="true"
-            android:background="@drawable/ic_send_24dp"
+            android:background="@drawable/message_logo"
             android:layout_alignParentRight="true"/>
 
     </RelativeLayout>

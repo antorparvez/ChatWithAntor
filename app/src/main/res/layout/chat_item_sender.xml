@@ -23,7 +23,7 @@
         android:layout_centerVertical="true"
         android:id="@+id/show_msg"
         android:textSize="20sp"
-        android:textColor="#fff"
+        android:textColor="@color/White"
         android:padding="10dp"
         android:layout_alignParentRight="true"/>
 

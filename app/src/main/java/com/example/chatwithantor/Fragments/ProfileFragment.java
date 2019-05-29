@@ -58,7 +58,6 @@ public class ProfileFragment extends Fragment {
     private static final int IMAGE_REQUEST = 1;
     private Uri imageUri;
     private StorageTask uploadTask;
-    private Button asdf;
 
 
     public ProfileFragment() {
@@ -84,42 +83,6 @@ public class ProfileFragment extends Fragment {
         storageReference = FirebaseStorage.getInstance().getReference("Uploads");
 
 
-        pro_name.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                Toast.makeText(getActivity(), "Hi", Toast.LENGTH_SHORT).show();
-
-                Intent intent = new Intent(getActivity(), MessageActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
-
-
-        asdf = view.findViewById(R.id.asdf);
-        profile_picture.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-/*
-                Intent intent = new Intent(getActivity(), MessageActivity.class);
-                startActivity(intent);
-*/
-
-
-
-             Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(intent,IMAGE_REQUEST);
-                Toast.makeText(getContext(), "Pro pic", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
 
 
         reference.addValueEventListener(new ValueEventListener() {
@@ -142,12 +105,28 @@ public class ProfileFragment extends Fragment {
 
             }
         });
+        profile_picture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Pro pic", Toast.LENGTH_SHORT).show();
+                profile_pic_select();
 
+            }
+        });
 
-
-        
-        
         return view;
+    }
+
+    private void profile_pic_select() {
+
+        Toast.makeText(getContext(), "sdjfjkajhf", Toast.LENGTH_SHORT).show();
+
+       /* Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(intent,IMAGE_REQUEST);
+        */
+
     }
 
 

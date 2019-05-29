@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:text="username"
         android:id="@+id/username_user"
+        android:textColor="@color/White"
         android:layout_toRightOf="@id/profile_image_user"
         android:layout_marginLeft="10dp"
         android:layout_centerVertical="true"

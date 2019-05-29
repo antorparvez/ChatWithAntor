@@ -4,44 +4,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="8dp"
     tools:context=".Fragments.ProfileFragment">
-
-
-
 
 
 <android.support.v7.widget.CardView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+   >
+
+
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/home"
+    android:padding="8dp">
+
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginTop="10dp"
         android:paddingLeft="15dp"
         android:text="Profile"
-        android:textStyle="bold"
+        android:textColor="@color/White"
         android:textSize="25sp"
-        android:textColor="@color/colorPrimaryDark"
-
-
+        android:textStyle="bold"
         />
-
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:id="@+id/asdf"
-        android:text="sdfasdfsaf"/>
-
-
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="150dp"
@@ -49,6 +38,7 @@
         android:id="@+id/profile_pic1"
         android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
+        android:clickable="true"
         android:src="@mipmap/ic_launcher"/>
 
     <TextView
@@ -59,7 +49,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:text="Md Syed Pavez"
+        android:text="User Name"
+        android:textColor="@color/White"
+        android:textStyle="bold"
         android:textSize="30sp" />
 
 

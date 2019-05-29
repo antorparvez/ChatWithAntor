@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="@drawable/home"
     tools:context=".MainActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -14,7 +15,7 @@
         <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark"
+            android:background="#1E88E5"
 
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
 
@@ -48,10 +49,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tab_layout"
-            android:background="@color/colorPrimaryDark"
+            android:background="#1E88E5"
             app:tabSelectedTextColor="@color/White"
             app:tabIndicatorColor="#5FD9E9"
-            app:tabRippleColor="#FF9800"
+            app:tabRippleColor="#8E24AA"
             app:tabTextColor="@color/White">
 
         </android.support.design.widget.TabLayout>
