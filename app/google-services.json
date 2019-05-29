@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "339282517165",
+    "firebase_url": "https://chatwithantor.firebaseio.com",
+    "project_id": "chatwithantor",
+    "storage_bucket": "chatwithantor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339282517165:android:4ef5c3bc6e036891",
+        "android_client_info": {
+          "package_name": "com.example.chatwithantor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339282517165-rf961c1tc5k675ldnggbidmc2ove3r8f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chatwithantor",
+            "certificate_hash": "2beee9ab793b74084f7213b1d5a5b3087c885d0a"
+          }
+        },
+        {
+          "client_id": "339282517165-sc6865oegqnkgas63n1kkt3ckh5ehm1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4xYFYf0zvhTjiWg_zcG8v73wtVfzhkAg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339282517165-sc6865oegqnkgas63n1kkt3ckh5ehm1j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
