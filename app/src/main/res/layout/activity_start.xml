@@ -6,26 +6,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="50dp"
+    android:background="@drawable/home"
     android:gravity="center"
     tools:context=".StartActivity">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Connect with Antor"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        />
+        android:layout_height="150dp"
+        android:src="@drawable/logo_main_copy"/>
+
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:id="@+id/login_main"
+        android:textColor="@color/White"
+        android:background="#122CAA"
         android:text="Login"/>
  <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
+     android:textColor="@color/White"
+
+     android:background="#122CAA"
         android:layout_marginTop="10dp"
         android:id="@+id/register_main"
         android:text="Register"/>
