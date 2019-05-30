@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.chatwithantor.Fragments.ChatFragment;
+import com.example.chatwithantor.Fragments.ProfileFragment;
 import com.example.chatwithantor.Fragments.UserFragment;
 import com.example.chatwithantor.POJO.User;
 import com.google.firebase.auth.FirebaseAuth;
@@ -30,12 +31,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    CircleImageView profile_image;
+    CircleImageView profile_img_small;
     TextView username;
 
 
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        profile_image = findViewById(R.id.pro_image_toolbar);
+        profile_img_small = findViewById(R.id.pro_image_toolbar);
         username = findViewById(R.id.username_toolbar);
 
         Toolbar toolbar = findViewById(R.id.toolbar_main);
@@ -75,11 +77,11 @@ public class MainActivity extends AppCompatActivity {
                 username.setText(user.getUsername());
 
                 if(user.getImageURL().equals("default")){
-                    profile_image.setImageResource(R.mipmap.ic_launcher);
+                    profile_img_small.setImageResource(R.mipmap.ic_launcher);
                 }
 
                 else {
-                    Glide.with(MainActivity.this).load(user.getImageURL()).into(profile_image);
+                    Glide.with(MainActivity.this).load(user.getImageURL()).into(profile_img_small);
                 }
             }
 
@@ -116,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent( MainActivity.this,StartActivity.class));
+                startActivity(new Intent( MainActivity.this,StartActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 finish();
                 return true;
 
@@ -156,5 +158,29 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return titles.get(position);
         }
+    }
+
+    private void status(String status){
+
+        FirebaseUser firebaseUser2 = auth.getCurrentUser();
+       // String userid = firebaseUser2.getUid();
+
+        DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference().child("user").child(firebaseUser2.getUid());
+
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("status",status);
+        reference1.updateChildren(hashMap);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        status("Online");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        status("Offline");
     }
 }
